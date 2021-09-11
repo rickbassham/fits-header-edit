@@ -1,0 +1,11 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "pytest.command": "pipenv run pytest",
+    "pythonTestExplorer.testFramework": "pytest"
+}
