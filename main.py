@@ -1,5 +1,6 @@
 import argparse
 import glob
+import os
 from typing import Any
 
 from astropy.io import fits
@@ -8,7 +9,7 @@ from astropy.io import fits
 def edit_fits_headers(
     path: str, header: str, value: Any, recursive: bool = False
 ) -> None:
-    for file_path in glob.iglob(path, recursive=recursive):
+    for file_path in glob.iglob(os.path.expanduser(path), recursive=recursive):
         print(f"{file_path} : {header}={value}")
 
         fits.setval(
