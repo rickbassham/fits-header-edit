@@ -11,7 +11,7 @@ def edit_fits_headers(
     for file_path in glob.iglob(path, recursive=recursive):
         fits.setval(
             file_path,
-            header=header,
+            header,
             value=value,
         )
 
